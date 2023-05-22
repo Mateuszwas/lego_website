@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Products - LEGO</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/slogo.jpeg">
+</head>
+<body>
+    <nav>
+        <ul class="list">
+          <li><a href="index.html"><img src="./assets/img/logo.jpeg" class="logo"/></a></li>
+          <li><a class="list-item-link" href="index.html">Home</a></li>
+          <li><a class="list-item-link" href="about_us.html">About us</a></li>
+          <li><a class="list-item-link" href="products.html">Products</a></li>
+          <li><a class="list-item-link" href="reviews.html">Reviews</a></li>
+          <li><a class="list-item-link" href="contact.html">Contact</a></li>
+         </ul>
+     </nav>
+     <section class="product">
+<div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 8</div>
+      <img src="./assets/img/1.jpeg" style="width:100%">
+      <div class="text">Porsche 911 / 10295 </div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 8</div>
+      <img src="./assets/img/2.jpg" style="width:100%">
+      <div class="text">Wehikuł czasu z "Powrotu do przeszłości" / 10300</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 8</div>
+      <img src="./assets/img/3.jpeg" style="width:100%">
+      <div class="text">Vespa 125 / 10298</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 8</div>
+      <img src="./assets/img/4.jpg" style="width:100%">
+      <div class="text">ECTO-1 Pogromca duchów / 10274</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 8</div>
+      <img src="./assets/img/5.jpeg" style="width:100%">
+      <div class="text">Pickup / 10290</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 8</div>
+      <img src="./assets/img/6.jpeg" style="width:100%">
+      <div class="text">Chevrolet Camaro Z28 / 10304</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 8</div>
+      <img src="./assets/img/7.webp" style="width:100%">
+      <div class="text">Ford F-150 Raptor / 42126</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">8 / 8</div>
+      <img src="./assets/img/8.webp" style="width:100%">
+      <div class="text">McLaren Formula 1 / 42141</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+</section>
+</body>
+</html>
